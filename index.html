@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do List</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista Tarefas</h1>
+        <form onsubmit="filterTask(event)">
+            <label for="taskName"></label>
+            <input type="text" id="taskName" placeholder="Nome da Tarefa" /><br/><br/>
+            <button type="submit">Adicionar</button>
+        </form>
+        <ul id="taskList"></ul>
+        <div class="taskFilter">
+            <label for="all">Filtrar Todas:</label>
+            <input type="radio" id="all" name="filter" value="all" checked onclick="filterTask()" />
+            <label for="completed">Filtar completas:</label>
+            <input type="radio" id="completed" name="filter" onclick="filterCompleted()" />
+            <label for="incompleted">Filtrar incompletas:</label>
+            <input type="radio" id="incompleted" value="incompleted" onclick="filterIncompleted()" />
+        </div>
+    </div>
+
+    <script src="js/main.js"></script> 
+</body>
+</html>
