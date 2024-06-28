@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Lista Tarefas</h1>
-        <form onsubmit="filterTask(event)">
+        <form id="taskForm">
             <label for="taskName"></label>
             <input type="text" id="taskName" placeholder="Nome da Tarefa" /><br/><br/>
             <button type="submit">Adicionar</button>
@@ -17,11 +17,11 @@
         <ul id="taskList"></ul>
         <div class="taskFilter">
             <label for="all">Filtrar Todas:</label>
-            <input type="radio" id="all" name="filter" value="all" checked onclick="filterTask()" />
-            <label for="completed">Filtar completas:</label>
-            <input type="radio" id="completed" name="filter" onclick="filterCompleted()" />
+            <input type="radio" id="all" name="filter" value="all" checked />
+            <label for="completed">Filtrar completas:</label>
+            <input type="radio" id="completed" name="filter" value="completed" />
             <label for="incompleted">Filtrar incompletas:</label>
-            <input type="radio" id="incompleted" value="incompleted" onclick="filterIncompleted()" />
+            <input type="radio" id="incompleted" name="filter" value="incompleted" />
         </div>
     </div>
 
